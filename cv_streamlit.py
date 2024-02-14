@@ -1,3 +1,6 @@
+"""
+Hacer comentarios aquí
+"""
 # PAQUETES
 import streamlit as st
 from PIL import Image
@@ -8,66 +11,78 @@ st.set_page_config(page_title='Santiago Danielli',
 
 # PARTES
 
-sobre_mi = """
-Soy Licenciado en Sociología por la Universidad de Buenos Aires y realice estudios de posgrados en estadística aplicada.
-Tengo más de tres años de experiencia como analista de datos, anteriormente en un organismo de derechos humanos y a
-actualmente en una empresa de investigación de mercado.
+descripcion = """
+Como Data Analyst me especializo en brindar servicios de consultoría analítica e implementar soluciones de 
+business intelligence. 
+Tengo conocimiento y experiencia en las más importantes tecnologías para aportar a la toma de decisiones a 
+partir de la explotación de los datos.
+Mis habilidades principales radican en el uso de Power BI para el armado de dashboards y visualizaciones, 
+como también los lenguajes de programación Python y SQL para la manipulación y limpieza de grandes volúmenes de 
+datos.
+"""
 
-En estos años, realice programas educativos y cursos para adquirir conocimientos en herramientas fundamentales para la 
-administración de bases de datos y el análisis de datos para la toma de decisiones (SQL, Python y Power BI)"""
-
-foto = Image.open('foto.png')
+foto = Image.open('santiago_danielli_circular.png')
+pin_certificado = Image.open("google_certificate_img.PNG")
 
 
 # PARTE PRINCIPAL
-st.header('Santiago Danielli')
-st.subheader('Sociólogo y analista de datos')
-st.write('¡Bienvenidos! Construí está versión de mi CV con Python y la librería Streamlit.')
+st.title('Santiago Danielli')
+st.subheader(':purple[Analista de datos]')
+st.markdown(descripcion)
+
 st.markdown('----')
-columna1, columna2 = st.columns([1, 2])
-with columna1:
-    st.image(foto, caption='Este soy yo. Un gusto')
-with columna2:
-    st.write('Mis datos de contacto')
-    st.write('Correo: santiagodanielli0@gmail.com')
-    st.write('Tel: 11 2389-8062')
-    st.write('Perfil de Linkedin: www.linkedin.com/in/santiago-danielli-3a6859b2')
-    st.write('Vivo en Posadas, Misiones, Argentina', ':flag-ar:')
-    st.markdown(sobre_mi)
-
-
-# SEGUNDA PARTE
 
 columna1, columna2 = st.columns(2)
 with columna1:
-    st.subheader('Experiencia')
-    st.write('Abril 2023 - Actualidad')
-    st.write('Administrador de base de datos y analista de datos en Latam Research')
-    st.write('Octubre 2019 - Marzo 2023')
-    st.write('Analista de datos en Dirección de Producción y Sistematización de la Información del CNPT-AR')
-    st.subheader('Educación')
-    st.write('2012 - 2020')
-    st.write('Licenciatura en Sociología, Universidad de Buenos Aires (UBA)')
-    st.write('2023')
-    st.write('Programa de Posgrado en Estadística Aplicada en Ciencias Sociales (FLACSO)')
-    st.subheader('Cursos y certificaciones')
-    st.write('Data Analysis - Coderhouse')
-    st.write('Introducción a bases de datos y SQL - Educación IT')
-    st.write('Fundamentos de Programación con SQL Server 2019 - Educación IT')
-    st.write('Certificado Profesional de Análisis de Datos de Google - Coursera')
+    st.image(foto)
 with columna2:
-    st.subheader('Herramientas de software')
-    st.write('Excel')
-    st.write(':chart_with_upwards_trend:',':chart_with_upwards_trend:',':chart_with_upwards_trend:',':chart_with_upwards_trend:',':chart_with_upwards_trend:')
-    st.write('Power BI')
-    st.write(':chart_with_upwards_trend:',':chart_with_upwards_trend:',':chart_with_upwards_trend:')
-    st.write('SQL')
-    st.write(':chart_with_upwards_trend:',':chart_with_upwards_trend:')
-    st.write('Python')
-    st.write(':chart_with_upwards_trend:',':chart_with_upwards_trend:')
-    st.subheader('Idioma Inglés')
-    st.write('Escrito y oral nivel intermedio')
-    st.subheader('Habilidades blandas')
-    st.write('Atención al detalle, pensamiento analítico, planificación y buen manejo de los tiempos y objetivos, trabajo en equipo')
+    st.write('')
+    st.write('')
+    st.write('Mis datos de contacto y web')
+    st.write(':e-mail: Correo: santiagodanielli0@gmail.com')
+    st.write(':telephone_receiver: Tel: 11 2389-8062')
+    st.link_button(":briefcase: Perfil de Linkedin", "www.linkedin.com/in/santiago-danielli-3a6859b2")
+    st.link_button(":mag: Web", "https://santiago-danielli.streamlit.app/")
+    st.link_button(":computer: Github - Proyectos", "https://github.com/santiagodanielli")
+    
+st.markdown('----')
 
+# SEGUNDA PARTE
+st.subheader('EXPERIENCIA LABORAL')
+st.write('*Abril 2023 - Actualidad*')
+st.write('Analista de datos en Latam Research')
+st.write("Tareas: gestionar y monitorear la base de datos, controlar el proceso de ETL, armado de informes.")
+st.write("")
+st.write('*Junio 2023 - Actualidad*')
+st.write("Docente en Taller Final Integrador, Especialización en Criminología, Universidad Nacional de Quilmes")
+st.write("Tareas: brindar el contenido de la materia sobre metodología de la investigación.")
+st.write("")
+st.write('*Octubre 2019 - Marzo 2023*')
+st.write('Asistente en equipo de datos y luego Analista de datos en CNPT-AR')
+st.write("Tareas: aportar al proceso de ETL, armado de informes.")
+st.write("")
+st.subheader('HABILIDADES TECNICAS')
+st.write('Lenguajes de programación: Python (Pandas, Numpy, Matplotlib, Plotly, Seaborn, Streamlit)')
+st.write('Visualización de datos y dashboards: Power BI')
+st.write('Bases de datos: MySQL, SQL Server')
+st.write("")
+st.subheader('EDUCACION')
+st.write('*2012 - 2020*')
+st.write('Licenciatura en Sociología, Universidad de Buenos Aires (UBA)')
+st.write("")
+st.write('*2023*')
+st.write('Programa de Posgrado en Estadística Aplicada en Ciencias Sociales (FLACSO)')
+st.write("")
+st.subheader('CERTIFICACIONES')
+st.link_button("Certificado Profesional de Análisis de Datos de Google", "https://coursera.org/share/af087c2e7bab59eebcc991cd5cb903b3")
+st.image(pin_certificado)
+st.write("")
+st.subheader('CURSOS')
+st.write('Data Analysis - Coderhouse')
+st.write('Introducción a bases de datos y SQL - Educación IT')
+st.write('Fundamentos de Programación con SQL Server 2019 - Educación IT')
+st.write("")
+st.subheader('IDIOMAS')
+st.write('Español: nativo')
+st.write('Inglés: avanzado oral y escrito')
 
