@@ -41,7 +41,7 @@ with columna2:
     st.write('Mis datos de contacto y web')
     st.write(':e-mail: Correo: santiagodanielli0@gmail.com')
     st.write(':telephone_receiver: Tel: 11 2389-8062')
-    st.link_button(":briefcase: Perfil de Linkedin", "www.linkedin.com/in/santiago-danielli-3a6859b2")
+    st.link_button(":briefcase: Perfil de Linkedin", "https://www.linkedin.com/in/santiago-danielli-3a6859b2/")
     st.link_button(":mag: Web", "https://santiago-danielli.streamlit.app/")
     st.link_button(":computer: Github - Proyectos", "https://github.com/santiagodanielli")
     
